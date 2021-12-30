@@ -1,0 +1,538 @@
+.bg-orange{
+    background-color: orangered;
+}
+.text-orange{
+    color: orangered !important;
+}
+
+.navbar{
+    height: 8vh;
+    background-image: url(dust_scratches.png);
+}
+.container-form-blog {
+    height: 92vh;
+}
+
+.container-form {
+    width: 400px;
+    z-index: 999;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* body {
+    background-image: url(assets/dust_scratches.png);
+} */
+
+/* navbar */
+nav {
+    display: flex;
+    background-color: #f4f3f3;
+    height: 8vh;
+    box-shadow: 0px 0px 10px gray;
+    position: relative;
+    background-image: url(assett/dust_scratches.png);
+}
+nav .left img{
+    height: 30px;
+}
+
+nav div {
+    display: flex;
+   align-items: center;
+   flex: 100%;
+}
+
+nav div.left {
+    padding-left: 50px;
+    flex: 90%;
+    display: flex;
+    align-items: center;
+}   
+
+nav ul {
+    list-style-type: none;
+    margin-left: 40px;
+}
+
+nav ul li{
+    display: inline;
+    margin-left: 40px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav div.right{
+    padding-right: 10px;
+    display: flex;
+    justify-content: flex-end;
+    flex: 20%;
+
+}
+
+nav .right a{
+    font-size: 15px;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px 8px;
+    text-decoration: none;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0,0.6);
+    font-weight: 600;
+    background: orangered;
+}
+/* akhir navbar */
+
+        /* Form contact */
+.container {
+    /* background-color: aqua; */
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.container .section{
+    display: flex;
+    align-items: center;
+    flex: 90%;
+}
+
+.container .section .info{
+    display: flex;
+}
+
+.form {
+    width: 30%; 
+    padding: 20px;
+    border-radius: 15px;
+    position: relative;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0,0.6);
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    background-image: url(assett/dust_scratches.png) ;
+}
+
+.form h1{
+    text-align: center;
+    font-family: 'Times New Roman';
+}
+
+
+#input-name {
+    width: 95%;
+    border: 0px rgb(222, 222, 222);
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0,0.6);
+    
+    
+}
+
+#input-email {
+    width: 95%;
+    border: 0px solid rgb(222, 222, 222);
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0,0.6);
+}
+
+
+#input-subject {
+    width: 95%;
+    border: 0px solid rgb(222, 222, 222);
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0,0.6);
+}
+
+#input-message {
+    width: 95%;
+    border: 0px solid rgb(222, 222, 222);
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    resize: vertical;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0,0.6);
+}
+
+footer{
+    justify-content: center;
+    display: flex;
+    background-color:  #f4f3f3;
+    padding: 15px;
+    color: black;
+    background-image: url(assett/dust_scratches.png);
+   
+}
+
+.cnt:active {
+    background-color: white !important;
+    color: black !important;
+}
+
+::placeholder {
+    font-family: 'Times New Roman';
+}
+
+label {
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    font-size: 18px;
+}
+
+button {
+    width: 130px;
+    color: black;
+    border: 0 solid white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0,0.6);
+}
+button:active {
+    background-color: orangered;
+    color: white;
+}
+
+        /* Akhir Form */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.container .section{
+    display: flex;
+    width: 85%;
+}
+
+.container .left{
+    flex: 30%;
+    display: flex;
+   
+}
+
+.container .right{
+    flex: 70%;
+    padding-left: 30px;
+    /* justify-content: flex-end;
+    align-items: center; */
+}
+
+.section .right .skill {
+    display: flex;
+}
+
+.section .right p {
+    color: gray;
+    line-height: 20px;
+}
+
+.section .right .skill div {
+    flex: 1;
+}
+
+.section .right .skill div img{
+    width: 50px;
+    height: 50px;
+}
+
+.section .right .sosial img{
+    width: 40px;
+    height: 40px;
+}
+
+
+    /* Contact Card */
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    
+    /* navbar */
+     
+    /* akhir navbar */
+    
+
+
+.container {
+        /* background-color: aqua; */
+        display: flex;
+        height: 93vh;
+        align-items: center;
+        justify-content: center;
+    }
+.container .section{
+        display: flex;
+        width: 85%;
+    }
+    
+.container .card{
+        flex: 30%;
+        display: flex;
+        padding-left: 50px;
+       
+    }
+    
+.container .folio{
+        flex: 70%;
+        padding-right: 30px;
+        padding-left: 30px;
+        /* justify-content: flex-end;
+        align-items: center; */
+    }
+    
+.section .folio .skill {
+        display: flex;
+    }
+    
+.section .folio p {
+        color: gray;
+        line-height: 20px;
+    }
+    
+.section .folio .skill div {
+        flex: 1;
+    }
+    
+.section .folio .skill div img{
+        width: 50px;
+        height: 50px;
+    }
+    
+.section .folio .sosial img{
+        width: 40px;
+        height: 40px;
+    }
+    
+.cn:hover{
+        color: red;
+    }
+.blog:hover{
+        color: red;
+    }
+    
+.cn {
+        color: orangered;
+    }
+.blog{
+    color: orangered;
+}
+    
+
+
+    /* Contact Card */
+.card div {
+        background: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0,0.6);
+        padding: 20px;
+        border-radius: 15px;
+        position: relative;
+        background-image: url(assett/dust_scratches.png);
+    }
+.section .card img {
+        width: 100%; 
+        border-radius: 25px 50px;
+    }
+.section .card h2{
+        text-align: left;
+    }
+.section .card p{
+        color: grey; 
+        text-align: left;
+        line-height: 18px;
+    }
+    
+.section .card table{
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+.section table th {
+        background-color: lightsalmon;
+    }
+.folio .awal h1{
+        background-image: url(assett/dust_scratches.png);
+        padding-left: 30px;
+        width: 450px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    
+    }
+
+    /* Akhir Card */
+  /* BLOG */
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+          }
+          
+          /* Blog Form */
+
+          
+          /* Blog list */
+.blog-cn .blog-list {
+            margin-top: 30px;
+            margin-bottom: 80px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+          }
+          
+.blog-cn .blog-list .blog-list-item {
+            width: 80%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 2px solid #dbdbdb;
+            border-radius: 8px;
+            display: flex;
+          }
+          
+.blog-cn .blog-list .blog-list-item .blog-image {
+            flex: 1;
+          }
+          
+.blog-cn .blog-list .blog-list-item .blog-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+          }
+          
+.blog-cn .blog-list .blog-list-item .blog-content {
+            padding-left: 20px;
+            flex: 2;
+          }
+          
+.blog-cn .blog-list .btn-group {
+            text-align: right;
+            margin-bottom: 20px;
+          }
+          
+.blog-cn .blog-list .btn-group .btn-edit {
+            padding: 4px 5px;
+            border: 0;
+            border-radius: 4px;
+            background: #dbdbdb !important;
+          }
+          
+.blog-cn .blog-list .btn-group .btn-delete {
+            padding: 4px 5px;
+            border: 0;
+            border-radius: 4px;
+            background: #ec4d37;
+            color: #fff;
+          }
+          
+.blog-cn .blog-list h1 a {
+            text-decoration: none;
+            color: #000000;
+          }
+          
+.blog-cn .blog-list .detail-blog-content {
+            font-weight: 200;
+            font-size: 12px;
+            line-height: 20px;
+          }
+          
+.blog-cn .blog-list .blog-list-item p {
+            margin-top: 20px;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 20px;
+            text-align: justify;
+          }
+
+.time {
+            text-align: right; 
+            font-size: 15px; 
+            color: gray;
+          }
+
+          /* Blog Detail */
+.blog-detail {
+            display: flex;
+            justify-content: center;
+            height: 93vh;
+          }
+          
+.blog-detail-container {
+            width: 80%;
+            margin: 40px 0;
+          }
+          
+.blog-detail-container img {
+            width: 100%;
+            height: 450px;
+          }
+          
+.blog-detail-container h1 {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 44px;
+            line-height: 120%;
+            margin-bottom: 15px;
+          }
+          
+.blog-detail-container .author {
+            font-weight: 100;
+            font-size: 20px;
+            line-height: 120%;
+            margin-bottom: 20px;
+          }
+          
+.blog-detail-container p {
+            margin-top: 40px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 140%;
+            text-align: justify;
+          }
+          
+        

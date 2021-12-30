@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Personal Web - Navbar & Layouting</title>
+
+    <link rel="stylesheet" href="public/style.css">
+    <link rel="shortcut icon" href="public/assett/logo.png" type="image/x-icon">
+
+</head>
+
+<body>
+    
+    <nav>
+        <div class="left">
+            <a href="/index">
+            <img src="public/assett/logo.png">
+            </a>
+            <ul>
+                <li>
+                    <a href="/index" class="cn">Home</a>
+                </li>
+                <li>
+                    <a href="/blog" class="#">Blog</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="right">
+            <a href="/form" class="cnt">Contact Me</a>
+        </div>
+        
+    </nav>
+
+    <!-- Contact Card -->
+                
+    <div class="container">
+                
+        <div class="section">
+
+            <div class="card">
+                      <div>
+
+         <img src="public/assett/foto.jpg"><br><br>
+
+         <h2>Abidin</h2>
+
+         <p>Saya menemukan bahwa semakin keras saya bekerja, semakin banyak keberuntungan yang saya milik dan menjadi Developer adalah karir yang menjanjikan</p>
+<br><br>
+                
+    <table border="1">
+                
+        <tr> 
+            <th>Project Name</th>
+            <th>Year</th>
+        </tr>
+                {{#each card}}  <!--each => pengulangan . properti -->
+        <tr>
+                <td>{{this.project}}</td>
+                <td style="text-align: center;">{{this.year}}</td>
+        </tr>
+             {{/each}}
+    </table>
+                      </div>
+            </div>
+                
+                    <!-- Akhir Card -->
+            <div class="folio">
+                    <div class="awal">
+                <h1>Words of Encouragement</h1><br>
+                <p> Bagaimanapun keadaan kita, mau sedih, bahagia, waktu tidak pernah berhenti menunggu.
+                    Waktu tetap berjalan</p>
+                <p>Semua mimpi kita akan terwujud, jika kita punya keberanian untuk mengejarnya.</p>
+                <p>Tak ada rahasia untuk menggapai sukses. Sukses itu dapat terjadi karena persiapan, kerja keras, dan mau belajar dari kegagalan.</p>
+                <p>Ada dua aturan untuk menjadi sukses. Pertama, cari tahu hal yang ingin Anda lakukan. Kedua, lakukan hal tersebut.</p><br>
+                    </div>
+
+                        <div class="skill">
+
+                            <div class="satu">
+                                <img src="public/assett/js.png"><h3>Front  End Javascript</h3><br>
+                                <p> bahasa pemrograman jenis interpreter,
+                                     sehingga kamu tidak memerlukan compiler 
+                                     untuk menjalankannya</p>
+                            </div>
+
+                            <div class="dua">
+                                <img src="public/assett/git.png"><h3>Version Control</h3><br>
+                                <p> digunakan untuk menyimpan repository
+                                    Menjadi wadah atau alat untuk kolaborasi dan
+                                     mengerjakan sebuah project
+                                 </p>
+                            </div>
+
+                            <div class="tiga">
+                                <img src="public/assett/deploy.png"><h3>Back End Developer</h3><br>
+                                <p>Software Developer yang bertanggung jawab 
+                                    dalam mengelola server, aplikasi, dan 
+                                    database agar dapat saling berkomunikasi 
+                                    dengan baik dan lancar.</p>
+                                </div>
+
+                        </div>
+                                <div class="sosial">
+                                    <h2>Found Me On</h2>
+                                    <br>
+                                    <a href="https://web.whatsapp.com/"><img src="public/assett/wa.png" alt=""></a>
+                                    <a href="https://www.instagram.com/"><img src="public/assett/ig.jpg" alt=""></a> 
+                                    <a href="https://web.whatsapp.com/"><img src="public/assett/tele.png" alt=""></a>   
+
+                                </div>
+            </div>
+
+        </div>
+                
+    </div>
+                
+
+        
+
+</body>
+</html>

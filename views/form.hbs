@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Abidin-Form</title>
+    <link rel="stylesheet" href="public/style.css">
+    <script src="index1.js"></script>
+    <link rel="shortcut icon" href="public/assett/logo.png" type="image/x-icon">
+
+    
+</head>
+<body>
+            <!-- Navbar -->
+    <nav>
+        <div class="left">
+            <a href="/index">
+            <img src="public/assett/logo.png">
+            </a>
+            <ul>
+                <li>
+                    <a href="/index" class="#">Home</a>
+                </li>
+                <li>
+                    <a href="/blog" class="#">Blog</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="right">
+            <a href="/form" class="cnt">Contact Me</a>
+        </div>
+        
+    </nav>
+    
+            <!-- contact form -->
+
+
+   <div class="container">
+       <div class="section">
+
+        <div class="form">
+                    <form>
+                        <h1>Form Informasi</h1>
+        
+                    <div style="margin-bottom: 10px;">
+                        <label for="input-name">Name</label>
+                        <input id="input-name" type="text" placeholder="Masukan Nama Anda">       
+                    </div>
+                    
+                    <div>
+                        <label for="input-email">Email</label>
+                        <input id="input-email" type="email" placeholder="Masukan Email Anda">
+                    </div>
+                    
+                    <div>
+                        <label for="input-subject">Subject</label>
+                        <select id="input-subject">
+                        
+                            <option>Lets's collaboration</option>
+                            <option>Let's talk</option>
+                            <option>Help to create some project</option>
+                            <option>I'm hiring</option>
+                    
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="input-message">Your Message</label>
+                        <textarea id="input-message"></textarea><br>
+                
+                    <input type="checkbox" id="checkbox">
+                    <label style="font-size: 15px;">Saya mengerti dan menyetujui syarat & ketentuan</label>
+                        </div><br>
+                    
+                    <center>
+                        <button type="button" onclick="submitform()">Submit</button>
+                    </center>
+                    
+                    </form>
+            </div>
+
+       </div>
+
+   </div>
+
+</body>
+
+<footer>Copyright @2021 | Bootcamp</footer>
+
+</html>

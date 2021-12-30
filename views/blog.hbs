@@ -1,0 +1,107 @@
+<html>
+  <head>
+    <title>Creating Blog Page</title>
+    <link rel="stylesheet" href="public/style.css" />
+  </head>
+  <body>
+    <!-- NavBar -->
+    <nav>
+        <div class="left">
+            <a href="/index">
+            <img src="public/assett/logo.png">
+            </a>
+            <ul>
+                <li>
+                    <a href="/index" class="#">Home</a>
+                </li>
+                <li>
+                    <a href="/blog" class="blog">Blog</a>
+                </li>
+            </ul>
+                            {{#if isLogin}}   <!-- mempercantik supaya posisi login dan logout -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex" style="padding-left: 100px;">
+                        <li class="nav-item">
+                            <span class="nav-link">Hello, {{user.name}}</span>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"  href="/logout">Logout</a>
+                        </li>
+                    </ul>
+                          {{else}}
+               
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex" style="justify-content: end;">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/register">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"  href="/login">Login</a>
+                        </li>
+                    </ul>
+                          {{/if}}
+
+              
+        <div class="right">
+           <a href="/form" class="cnt" style="text-decoration: none">Contact Me</a>
+        </div>
+    </nav>
+        {{#if messages.success}}
+            <div class="alert alert-success" role="alert" style="background-color: palegreen;">
+                {{messages.success}}
+            </div>  
+         {{/if}}    
+    <!-- Blog -->
+    <!-- Form -->
+    <div class="blog-cn">
+
+      <div style= "text-align: right; padding-right: 130px; margin-top: 50px;">
+            {{#if isLogin}}
+              <a href="/add-blog" style="
+            background-color: orangered; 
+            padding: 7px 20px; 
+            border: none; 
+            border-radius: 8px; 
+            color: white;
+            text-decoration: none">Add New Blog</a>
+            {{/if}}
+
+      </div>
+
+      <div id="contents" class="blog-list">
+        <!-- dynamic content would be here -->
+        {{#each blogs}}   <!--each => pengulangan . properti -->
+        <div class="blog-list-item">
+          <div class="blog-image">
+            <img src="{{this.image}}" alt="" />
+          </div>
+          <div class="blog-content">
+
+                {{#if this.isLogin}}
+            <div class="btn-group">
+              <a href="/edit-blog/{{this.id}} " style="text-decoration: none;" class="btn-edit">Edit Post</a>
+              <a href="/delete-blog/{{this.id}}" style="text-decoration: none;" class="btn-delete">Delete Blog</a>
+                                {{!-- @index = bawaan dari hbs --}}
+            </div>
+                {{/if}}
+
+            <h1>
+              <a href="/detail-blog/{{this.id}}" target="_blank"
+                >{{this.title}}</a
+              >
+            </h1>
+            <div class="detail-blog-content">
+              {{this.post_at}} | {{this.author}}
+            </div>
+            <p>
+             {{this.content}}
+            </p>
+            <div class="time">
+              <span style="font-size: 15px; color: grey">{{this.post_age}}</span>
+            </div>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+    <script src="blog.js"></script>
+  </body>
+</html>
