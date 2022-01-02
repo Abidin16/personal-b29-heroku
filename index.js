@@ -133,16 +133,30 @@ app.get('/blog', function(req, res){
 
 app.get('/detail-blog/:id', function(req, res){
     let id = req.params.id
+    
+
+    let query = `SELECT blog.id, blog.title, blog.content, blog.image, tb_user.name AS author, blog.post_at  FROM blog  LEFT JOIN tb_user
+ON tb_user.id = blog.author_id WHERE blog.id = ${id}`
 
     db.connect(function(err, client, done){
         if (err) throw err
 
-        client.query(`SELECT * FROM blog WHERE id = ${id}`, function ( err,result){
+        client.query(query, function ( err,result){
             if (err) throw err
             let data = result.rows[0]
 
-            console.log(data)    
-            res.render('detail-blog', {id : id, blog: data}) 
+           data= {
+                            title: data.title,
+                            content: data.content,
+                            image: '/uploads/'+ data.image,
+                            author: data.author,
+                            post_at: getFulltime(data.post_at),
+                            
+                        }
+            res.render('detail-blog', {
+                                id : id, 
+                                blog: data,
+                                }) 
         })
     })
 })
@@ -268,9 +282,9 @@ app.get('/login' , function(req,res){
 app.post('/login' , function(req,res){
     const { email, password } = req.body
 
-    let query = `SELECT * FROM tb_user WHERE email = '${email}'`
+    let query = `SELECT * FROM tb_user WHERE email = '${email}'`      //pengecekan apakah ada yang login 
 
-    db.connect(function(err, client, done){
+    db.connect(function(err, client, done){                                   
         if (err) throw err
 
         client.query(query, function(err, result){
@@ -281,10 +295,10 @@ app.post('/login' , function(req,res){
                 return  res.redirect('/login')
             }
 
-            let isMatch = bcrypt.compareSync(password, result.rows[0].password)
+            let isMatch = bcrypt.compareSync(password, result.rows[0].password)     // cocokan passsword
 
             if(isMatch) {                           //session penyimpanan sementara di sisi client
-                req.session.isLogin = true
+                req.session.isLogin = true          
                 req.session.user = {
                     id: result.rows[0].id,
                     name:  result.rows[0].name,
@@ -326,7 +340,8 @@ function getDistanceTime(time) {
         let secondsinHours = 3600  
         let hoursInDay = 23  
     
-        let distanceDay = distance / (miliseconds * secondsinHours * hoursInDay)
+        let distanceDay =  Math.floor(distance /(miliseconds * secondsinHours * hoursInDay))
+        
 
     if(distanceDay >= 1) {
         return(`${distanceDay} day ago`)
