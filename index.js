@@ -9,7 +9,7 @@ const flash = require('express-flash')
 
 
 const app = express()
-const PORT = process.env.PORT || 5007
+const PORT = process.env.PORT || 3000
 
 let isLogin = true
 let blogs = [
@@ -70,7 +70,7 @@ app.use(
 )
 app.use(flash())
 
-app.get('/index', function (req,res){
+app.get('/', function (req,res){
 
     db.connect(function(err, client, done){
         if (err) throw err
